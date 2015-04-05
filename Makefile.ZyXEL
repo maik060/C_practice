@@ -1,0 +1,24 @@
+include $(PROJECT_SRC_DIR)/Make.config 
+
+
+APP_SRC_DIR := $(shell pwd)
+APP_OBJ_DIR := $(PROJECT_APPS_BUILD_DIR)/$(shell basename `pwd`)
+
+
+DEPENDENCY :=
+
+
+all: _dependency _clone _cross install
+
+
+_cross:
+	$(MAKE) -C $(APP_OBJ_DIR) $(MAKE_TOOLCHAIN)
+
+install:
+
+clean:
+	$(MAKE) -C $(APP_OBJ_DIR)/the_C_programming_language clean
+
+.PHONY: all _cross _configure clean distclean region_config
+
+include $(PROJECT_SRC_DIR)/Make.misc
