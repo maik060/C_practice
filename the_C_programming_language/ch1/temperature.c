@@ -2,9 +2,9 @@
 
 int main(int argc, char *argv[])
 {
-	int c;
-	for(c = 0; c <= 300; c += 20) {
-		printf("%d	%d\n", c, c * 9 / 5 + 32);
+	int f;
+	for(f = 0; f <= 300; f += 20) {
+		printf("%d	%d\n", f, 5 * (f - 32) / 9);
 	}
 	return 0;
 }
