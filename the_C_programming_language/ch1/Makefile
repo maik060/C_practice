@@ -4,16 +4,13 @@ CFLAG = -g -Wall
 
 all: temperature
 
-
-temperature: temperature.o
-	$(CC) $@.o -o $@
-
-temperature.o: temperature.c
-
-
 %.o: %.c
 	$(CC) -c $< -o $@
+%: %.o
+	$(CC) $@.o -o $@
 
+temperature: temperature.o
+temperature.o: temperature.c
 
 clean: clean_temperature 
 
