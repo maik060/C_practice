@@ -1,5 +1,6 @@
-#define FAHR_TO_CELSIUS(f) (5.0 / 9.0 * (f - 32.0))
+#include <stdio.h>
 
+#define FAHR_TO_CELSIUS(f) (5.0 / 9.0 * (f - 32.0))
 int main(int argc, char *argv[])
 {
 	float f;
