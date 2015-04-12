@@ -10,12 +10,5 @@ all: $(BASE_NAME)
 %.o: %.c
 	$(CC) -c $< -o $@
 
-temperature: temperature.o
-temperature.o: temperature.c
-1-3: 1-3.o
-1-3.o: 1-3.c
-1-4: 1-4.o
-1-4.o: 1-4.c
-
 clean:
 	rm *.o
